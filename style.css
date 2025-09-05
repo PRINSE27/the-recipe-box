@@ -1,8 +1,14 @@
-/* General Styles */
+/* =========================
+   Global Styles
+========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -17,13 +23,18 @@ body {
   max-width: 1200px;
   margin: auto;
   padding: 20px;
+  padding-top: 0;
 }
 
-/* Navbar */
+/* =========================
+   Navbar
+========================= */
 .navbar {
   background: linear-gradient(to right, #c17d67, #ffecd2);
-  border-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
   display: flex;
+  
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
@@ -37,7 +48,7 @@ body {
   gap: 10px;
   font-size: 1.8rem;
   font-weight: bold;
-  color: #333333;
+  color: #333;
 }
 
 .nav-logo {
@@ -60,17 +71,24 @@ body {
 
 .nav-links li a:hover {
   color: #4a148c;
+  
 }
 
-/* Hero Section */
+/* =========================
+   Hero Section
+========================= */
+/* =========================
+   Hero Section
+========================= */
 .hero {
   background: linear-gradient(to right, #ffecd2, #c17d67);
   color: #692828;
-  padding: 40px;
+  padding: 10px;
   border-radius: 16px;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 40px auto;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-radius 0.4s ease;
 }
 
 .hero-content {
@@ -93,17 +111,30 @@ body {
   font-size: 2.5rem;
   margin-bottom: 10px;
   font-weight: 700;
+  padding-left: 55px;
 }
 
 .hero p {
   font-size: 1rem;
   margin-bottom: 15px;
+  padding-left: 55px;
 }
 
-/* Search Bar */
+.hero:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 0;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+/* =========================
+   Search Bar
+========================= */
 .search-container {
   position: relative;
   max-width: 400px;
+  padding-left: 55px;
 }
 
 .search-container input {
@@ -126,7 +157,9 @@ body {
   cursor: pointer;
 }
 
-/* Recipe Grid */
+/* =========================
+   Recipe Grid
+========================= */
 #recipeGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -135,18 +168,23 @@ body {
 }
 
 .card {
-  background: linear-gradient(to right,#c17d67, #ffecd2);
-  border-bottom-right-radius: 15px;
-  border-top-left-radius: 15px;
+  background: linear-gradient(to right, #c17d67, #ffecd2);
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
   overflow: hidden;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
 }
 
 .card:hover {
   transform: scale(1.02);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 0px;
+   border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  
 }
 
 .card img {
@@ -161,7 +199,9 @@ body {
   color: #333;
 }
 
-/* Modal */
+/* =========================
+   Modal
+========================= */
 .modal {
   display: none;
   position: fixed;
@@ -197,8 +237,8 @@ body {
 }
 
 .modal-content img {
-  height: 50%;
   width: 50%;
+  height: 50%;
   border-bottom-right-radius: 15px;
   border-top-left-radius: 15px;
   margin-bottom: 1rem;
@@ -210,7 +250,9 @@ body {
   color: #4a148c;
 }
 
-/* Info Sections */
+/* =========================
+   Info Sections
+========================= */
 .info-section {
   background: linear-gradient(to right, #c17d67, #ffecd2);
   padding: 40px 20px;
@@ -232,17 +274,28 @@ body {
   color: #4c1313;
 }
 
-/* Footer */
+/* =========================
+   Footer
+========================= */
 footer {
   text-align: center;
-  padding: 20px;
+  padding-top: 40px;
+  
   color: rgb(32, 27, 27);
   margin-top: 40px;
-  border-radius: 12px;
+  border-radius: 1px;
+  margin-top: 100px;
+  padding-bottom: 0;
+  
 }
 
-/* Social Media Icons */
-/* Modern Animated Social Media Icons */
+footer:hover{
+  color: whitesmoke;
+}
+
+/* =========================
+   Social Media Icons
+========================= */
 .social-icons {
   margin-top: 15px;
   display: flex;
@@ -258,11 +311,10 @@ footer {
 }
 
 .social-icons a:hover {
-  color: #191818; /* Bright hover color */
-  transform: translateY(-5px) scale(1.3); /* Bounce + grow */
+  color: #191818;
+  transform: translateY(-5px) scale(1.3);
 }
 
-/* Optional: add a subtle pulse animation */
 .social-icons a::after {
   content: '';
   position: absolute;
@@ -279,11 +331,12 @@ footer {
 
 .social-icons a:hover::after {
   width: 100%;
-  
+  height: 100%;
 }
 
-
-/* Show More Button */
+/* =========================
+   Show More Button
+========================= */
 .show-more-container {
   display: flex;
   justify-content: center;
@@ -295,7 +348,8 @@ footer {
   color: white;
   border: none;
   padding: 12px 30px;
-  border-radius: 30px;
+ border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
@@ -306,9 +360,15 @@ footer {
 #showMoreBtn:hover {
   background-color: #302a35;
   transform: scale(1.05);
+   border-bottom-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 15px;
 }
 
-/* Download Button */
+/* =========================
+   Download Button
+========================= */
 #downloadBtn {
   display: block;
   margin: 20px auto 0;
@@ -328,7 +388,9 @@ footer {
   transform: scale(1.05);
 }
 
-/* View Toggle */
+/* =========================
+   View Toggle
+========================= */
 .view-toggle {
   display: flex;
   gap: 10px;
@@ -338,7 +400,8 @@ footer {
 .view-toggle button {
   padding: 8px 16px;
   font-weight: 600;
-  border-radius: 30px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   border: none;
   cursor: pointer;
   background-color: #3e3f33;
@@ -349,6 +412,10 @@ footer {
 .view-toggle button:hover {
   background-color: #544b5b;
   transform: scale(1.05);
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .view-toggle button.active {
@@ -359,7 +426,9 @@ footer {
   margin-right: 6px;
 }
 
-/* List View */
+/* =========================
+   List View
+========================= */
 .list-view {
   display: flex !important;
   flex-direction: column;
