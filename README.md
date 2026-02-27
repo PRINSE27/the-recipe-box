@@ -20,7 +20,7 @@ A simple, responsive recipe manager for adding, viewing, editing, and organizing
 ## Getting started (local)
 Option 1 — Open locally:
 1. Clone the repo:
-   git clone https://github.com/procodes27/the-recipe-box.git
+   git clone https://github.com/prinse27/the-recipe-box.git
 2. Open `index.html` in your browser.
 
 Option 2 — Use a simple local server (recommended):
@@ -53,7 +53,7 @@ If you add export/import features:
 To publish updates:
 1. Commit and push changes to the `main` branch (or the branch configured in repository settings).
 2. GitHub Pages will serve the site at:
-   https://procodes27.github.io/the-recipe-box/
+   https://prinse27.github.io/the-recipe-box/
 
 To use a custom domain, add a `CNAME` file with your domain and configure DNS at your registrar.
 
@@ -69,5 +69,5 @@ Contributions are welcome — open a PR for bug fixes, UI/UX improvements, acces
 Add a LICENSE file to apply an open-source license (MIT is a common choice).
 
 ## Contact
-- GitHub: https://github.com/procodes27
-- Site: https://procodes27.github.io/the-recipe-box/
+- GitHub: https://github.com/prinse27
+- Site: https://prinse27.github.io/the-recipe-box/
