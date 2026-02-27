@@ -1,6 +1,6 @@
 # The Recipe Box
 
-Live demo: https://procodes27.github.io/the-recipe-box/
+Live demo: https://prinse27.github.io/the-recipe-box/
 
 A simple, responsive recipe manager for adding, viewing, editing, and organizing personal recipes. This repository contains the static site (HTML, CSS, JavaScript, and assets) used to power the live demo above.
 
